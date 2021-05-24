@@ -5,8 +5,8 @@ import pyautogui
 from time import sleep
 
 # your credentials
-client_id = '14bf219d4e884a868156b4856d8dcff9' 
-client_secret = 'cfa4cdf241714f0885af1a3656ce8200'
+client_id = 'Poner id' #https://developer.spotify.com/dashboard/login
+client_secret = 'Poner id '
 flag = 0
 
 # artist and name of the song
