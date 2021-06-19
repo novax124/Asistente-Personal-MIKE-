@@ -50,7 +50,7 @@ def run_juanita():
         rec = listen()
 
         if "" in rec:
-            webbrowser.open("https://en.wikipedia.org/wiki/"+rec)
+            webbrowser.open("https://es.wikipedia.org/wiki/"+rec)
         else:
             pass
 
