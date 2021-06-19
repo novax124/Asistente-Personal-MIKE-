@@ -52,7 +52,7 @@ def listen():
     return rec
 
 
-def run_juanita():
+def run_mike():
     rec = listen()
     if "correo" in rec:
         #music = rec.replace("envia correo", "")
@@ -108,4 +108,4 @@ def seguroo():
 
 
 if __name__ == "__main__":
-    run_juanita()
+    run_mike()
