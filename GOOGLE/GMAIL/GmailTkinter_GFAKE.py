@@ -20,12 +20,12 @@ miframe.pack()
 mimeMessage = MIMEMultipart() #no se si ponerlo fuera de la función
 
 def enviarcorreo():
-    if enviara.get() == "DAVID":
-        mimeMessage["to"] = "davidpuertas1234@gmail.com"
+    if enviara.get() == "PERSONA 1":
+        mimeMessage["to"] = "correomentira@gmail.com"
         accion()
 
-    if enviara.get() == "CAROL":
-        mimeMessage["to"] = "ccrespo@ibellvitge.net"
+    if enviara.get() == "PERSONA 1":
+        mimeMessage["to"] = "correomentira@gmail.com"
         accion()
 
     else:
