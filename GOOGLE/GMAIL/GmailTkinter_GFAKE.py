@@ -4,7 +4,7 @@ import base64
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-CLIENT_SECRET_FILE = "trchatbot.json"
+CLIENT_SECRET_FILE = "cliente ID"
 API_NAME = "gmail"
 API_VERSION = "v1"
 SCOPES = ["https://mail.google.com/"]
