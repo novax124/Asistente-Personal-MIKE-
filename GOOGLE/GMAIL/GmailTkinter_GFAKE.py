@@ -24,8 +24,8 @@ def enviarcorreo():
         mimeMessage["to"] = "correomentira@gmail.com"
         accion()
 
-    if enviara.get() == "PERSONA 1":
-        mimeMessage["to"] = "correomentira@gmail.com"
+    if enviara.get() == "PERSONA 2":
+        mimeMessage["to"] = "correomentir2@gmail.com"
         accion()
 
     else:
