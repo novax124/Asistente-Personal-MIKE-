@@ -93,7 +93,7 @@ def mensajee():
 def seguroo():
     rec = listen()
     if "Si" or "Claro" in rec:
-        mimeMessage["to"] = "davidpuertas1234@gmail.com"
+        mimeMessage["to"] = "correomentira@gmail.com"
         mimeMessage["subject"] = titulito
         emailMsg = mensajito 
         mimeMessage.attach(MIMEText(emailMsg, "plain"))
