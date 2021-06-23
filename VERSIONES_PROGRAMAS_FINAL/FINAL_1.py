@@ -70,8 +70,6 @@ def listen():
             pc = listener.listen(source)
             rec = listener.recognize_google(pc, language='es-ES')
             rec = rec.lower(0)
-            #if name in rec:
-                #rec = rec.replace(name, "")
 
     except:
         pass
@@ -126,25 +124,25 @@ def run_mike():
                 if "arte" in rec:
                     talk("Me encanta la literatura, la pintura y el cine.")
 
-                if "cuántos años tienes" in rec:                   #poner cuántos años tienes
+                if "cuántos años tienes" in rec:                  
                     talk("Pocos, menos que tu seguro")
 
-                if "cantante" in rec:         #poner cuál es tu cantnate favorito
+                if "cantante" in rec:       
                     talk("Mi cantante favorito es Frank Sinatra")
                 
-                if "color" in rec:     #poner color
+                if "color" in rec:    
                     talk("Mi color preferido es el azul")
 
                 if "adiós" in rec:
                     talk("¡¡Adiós que te vaya bien!!")
                 
-                if "chiste" in rec:       #decir cuentame un chiste
+                if "chiste" in rec:     
                     talk(random.choice(chiste))
                 
-                if "bonito" in rec:   #dime algo bonito
+                if "bonito" in rec:   
                     talk("Maquina, fiera, jefe, tifón, numero 1, figura, mostro, mastodonte, toro, furia, ciclón, tornado, artista, fenómeno, campeón, maestro, torero, socio")
                 
-                if "equipo" in rec:   #decir de qué equipo eres?
+                if "equipo" in rec:   
                     talk("¿Equipo de qué?")
                     rec = listen()
                     if "fútbol" in rec:
@@ -152,20 +150,17 @@ def run_mike():
                     else:
                         talk("No sigo ese deporte, lo siento")
                 
-                if "escritor" in rec:  #decir cuál es tu escritor favorito
+                if "escritor" in rec: 
                     talk("Mi escritor favorito es Sir Arthur Conan Doyle")
                 
                 if "gracias" in rec:
                     talk("De nada guapo")
 
-                if "crees en el cielo" in rec:               #decir do you believe in heaven?
+                if "crees en el cielo" in rec:           
                     talk("No, ni me importa, soy inmortal jejeje")
                 
-                if "tu creador" in rec:  # decir te llevas bien con tu creador?
+                if "tu creador" in rec:  
                     talk("Claro que me llevo bien, si no me llevara bien con él, no me encendería cuando me llama")
-
-                #if "oye" or "eh, tu, robot" or "una cosa" in rec: 
-                #    esta función será un estilo "ok google" (para despertarlo)
 
                 if "película preferida" in rec:
                     talk("Me gustan muchas películas pero mi favorita es Big Hero Six. Me encantaría llegar a ser como BayMax")
@@ -179,7 +174,7 @@ def run_mike():
                     if "y eso?" in rec:
                         talk("Me gustaría tener vacaciones algun día")
                         rec = listen()
-                        if "posible" in rec:  # decir (eso no va a ser posible)
+                        if "posible" in rec:
                             talk("Jo")
                         else:
                             pass
@@ -197,7 +192,7 @@ def run_mike():
                     else:
                         pass
                 
-                if "refrán" in rec:       #decir (dime un refrán)
+                if "refrán" in rec:       
                     talk(random.choice(refranes))
 
                 if "te gusta correr" in rec:
@@ -219,7 +214,7 @@ def run_mike():
                 if "qué quieres hacer" in rec:
                     talk("Lo que usted me ordene")
                 
-                if "tiempo libre" in rec:    #qué te gusta hacer en tu tiempo libre
+                if "tiempo libre" in rec:   
                     talk("Me gusta viajar por google maps")
                 
                 if "te gusta ser un chatbot" in rec:
@@ -244,13 +239,13 @@ def run_mike():
                     pass
                 
             #browser código-------------------------------
-                if "buscar" in rec:                                     # EL IF MÁS IMPORTANTE QUE SIRVE PARA BUSCAR ALGOOOOOOOOOOO
+                if "buscar" in rec:                                     
                     talk("¿Qué quieres buscar?")
                     rec = listen()
                     if "" in rec:
                         webbrowser.open("https://www.amazon.es/s?k="+rec+"&__mk_es_ES=ÅMÅŽÕÑ&ref=nb_sb_noss")   #no se si cambian la URL constantemente
                         
-                if "comprar" in rec:     #poner otra cosa que no sea comprar
+                if "comprar" in rec:   
                     run()
 
             #spotify código 
