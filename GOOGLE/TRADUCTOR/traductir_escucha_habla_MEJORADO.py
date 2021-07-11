@@ -72,8 +72,8 @@ def empezar():
     global contador
     global contador2
     global saber
-    talk("¿Quieres traducir del inglés al castellano o del castellano al inglés?")
-    print("¿Quieres traducir del inglés al castellano o del castellano al inglés?")
+    talk("¿Quieres traducir del inglés al español o del español al inglés?")
+    print("¿Quieres traducir del inglés al español o del español al inglés?")
     rec = listen()
     if "del inglés al castellano" in rec:
         print("Qué quieres decir?")
