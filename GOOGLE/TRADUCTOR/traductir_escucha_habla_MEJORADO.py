@@ -75,7 +75,7 @@ def empezar():
     talk("¿Quieres traducir del inglés al español o del español al inglés?")
     print("¿Quieres traducir del inglés al español o del español al inglés?")
     rec = listen()
-    if "del inglés al castellano" in rec:
+    if "del inglés al español" in rec:
         print("Qué quieres decir?")
         talk("Qué quieres decir?")
         rec = listen2()
