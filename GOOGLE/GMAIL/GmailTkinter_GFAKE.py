@@ -60,7 +60,7 @@ tituloo = StringVar()
 segundocuadro = Entry(miframe, textvariable= tituloo).grid(row = 2, column= 1)
 
 
-textoComentario = Text(miframe, width = 30, height = 10)    # no se si está bien  
+textoComentario = Text(miframe, width = 30, height = 10)    
 textoComentario.grid(row = 3, column = 1)
 
 scrollVert = Scrollbar(miframe, command= textoComentario.yview) 
@@ -71,6 +71,6 @@ textoComentario.config(yscrollcommand= scrollVert.set)
 #-------botón_enviar---------------------------
 
 enviar = Button(miframe, text = "Enviar", command= enviarcorreo).grid(row = 4, column = 3)
-#borrar = Button(miframe, text = "Borrar", command = borrartodo).grid(row = 4, column = 3)                        
+                     
 
 root.mainloop()
