@@ -8,22 +8,20 @@ SCOPES = ["https://www.googleapis.com/auth/drive"]
 
 service = Create_Service(CLIENT_SECRET_FILE, API_NAME, API_VERSION, SCOPES)
 
-id_carpeta = "id de la carpeta"
-nom_arxius = ["nom de l'arxiu"]
-tipus = ["image/jpeg   <-- en cas de que sigui una imatge tipus jpg"]
+folder_id = "id de la carpeta"
+file_names = ["nombre del archivo"]
+mime_types = ["image/jpeg   <-- en el caso de que se una imagen"]
 
-for nom_arxiu, tip in zip(nom_arxius, tipus):
-    metadata = {
-        "name" : nom_arxiu,
-        "parents" : [id_carpeta]
+for file_name, mime_type in zip(file_names, mime_types):
+    file_metadata = {
+        "name" : file_name,
+        "parents" : [folder_id]
     }
 
-    media = MediaFileUpload("./Drive/{0}".format(nom_arxiu), mimetype=tip)
+    media = MediaFileUpload("./Drive/{0}".format(file_name), mimetype=mime_type)
 
     service.files().create(
-        body= metadata,
+        body=file_metadata,
         media_body = media,
         fields = "id"
     ).execute()
-
-    
