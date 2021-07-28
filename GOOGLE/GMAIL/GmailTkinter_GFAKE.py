@@ -17,7 +17,7 @@ miframe = Frame(root, width= 650, height= 650)
 miframe.pack()
 
 #-------gmail-----------------------------
-mimeMessage = MIMEMultipart() #no se si ponerlo fuera de la función
+mimeMessage = MIMEMultipart()
 
 def enviarcorreo():
     if enviara.get() == "PERSONA 1":
