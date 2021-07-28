@@ -55,7 +55,6 @@ def listen():
 def run_mike():
     rec = listen()
     if "correo" in rec:
-        #music = rec.replace("envia correo", "")
         print("¿A quién quieres que se lo envíe? ")
         talk("¿A quién quieres que se lo mande?")
         enviara()
@@ -66,7 +65,7 @@ def run_mike():
 
 def enviara():
     rec = listen()
-    if "David" or "gran" in rec:
+    if "nombre de la persona" in rec:
         print("¿Título?")
         talk("¿Título?")
         tituloo()
@@ -75,7 +74,7 @@ def tituloo():
     rec = listen()
     if " " in rec:
         global titulito
-        titulito = rec  #no se si está bien
+        titulito = rec  
         print("¿Qué mensaje quieres que le envíe?")
         talk("¿Qué mensaje quieres que le envíe?")
         mensajee()
@@ -92,7 +91,7 @@ def mensajee():
 
 def seguroo():
     rec = listen()
-    if "Si" or "Claro" in rec:
+    if "Si" in rec:
         mimeMessage["to"] = "correomentira@gmail.com"
         mimeMessage["subject"] = titulito
         emailMsg = mensajito 
