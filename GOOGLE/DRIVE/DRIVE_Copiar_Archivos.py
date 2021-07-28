@@ -12,9 +12,9 @@ id_arxiu = "id del archivo"
 id_carpeta = ["id de la carpeta"]           
 
 metadata = {
-    "name" : "nombre para el archivo",
+    "name" : "nom del arxiu",
     "parents" : id_carpeta,
-    "description" : "descripción del archivo"
+    "description" : "descripció de l'arxiu"
 
 }
 
