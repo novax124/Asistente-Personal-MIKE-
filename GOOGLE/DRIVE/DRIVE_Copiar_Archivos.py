@@ -6,19 +6,19 @@ API_NAME = "drive"
 API_VERSION = "v3"
 SCOPES = ["https://www.googleapis.com/auth/drive"]
 
-servei = Create_Service(CLIENT_SECRET_FILE, API_NAME, API_VERSION, SCOPES)
+service = Create_Service(CLIENT_SECRET_FILE, API_NAME, API_VERSION, SCOPES)
 
-id_arxiu = "id del archivo"         
-id_carpeta = ["id de la carpeta"]           
+source_file_id = "id del archivo"         
+folder_ids = ["id de la carpeta"]           
 
-metadata = {
-    "name" : "nom del arxiu",
-    "parents" : id_carpeta,
-    "description" : "descripció de l'arxiu"
+file_metadata = {
+    "name" : "nombre para el archivo",
+    "parents" : folder_ids,
+    "description" : "descripción del archivo"
 
 }
 
-servei.files().copy(
-    fileId= id_arxiu,
-    body= metadata
+service.files().copy(
+    fileId= source_file_id,
+    body=file_metadata
 ).execute()
