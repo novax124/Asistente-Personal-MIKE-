@@ -9,23 +9,23 @@ SCOPES = ["https://www.googleapis.com/auth/calendar"]
 
 service = Create_Service(CLIENT_SECRET_FILE, API_NAME, API_VERSION, SCOPES)
 
-calendar_id_chicago = 'id del calendar'
+calendari = 'id del calendar'
 
 """
 Create an event
 """
 colors = service.colors().get().execute()
-pprint(colors)  #no es necesario hacer este print
+pprint(colors)  
 
 
-hour_adjustment = -2
-event_request_body = {
+hora = -2
+events = {
     'start': {
-        "dateTime": convert_to_RFC_datetime(2021, 5, 21, 12 + hour_adjustment ,45 ),
+        "dateTime": convert_to_RFC_datetime(2021, 5, 21, 12 + hora ,45 ),
         "timeZone": "zona horaria"
     },
     "end": {
-        "dateTime": convert_to_RFC_datetime(2021,5,21,14 + hour_adjustment , 45 ),
+        "dateTime": convert_to_RFC_datetime(2021,5,21,14 + hora , 45 ),
         "timeZone": "zona horaria"
     },
     "summary": "título del evento",
@@ -62,12 +62,12 @@ sendUpdate = "none"
 supportsAttachments = True
 
 response = service.events().insert(
-    calendarId = calendar_id_chicago,
+    calendarId = calendari,
     maxAttendees=maxAttendees,
     sendNotifications= sendNotification,
     sendUpdates = sendUpdate,
     supportsAttachments=supportsAttachments,
-    body=event_request_body
+    body=events
 
 ).execute()
 
