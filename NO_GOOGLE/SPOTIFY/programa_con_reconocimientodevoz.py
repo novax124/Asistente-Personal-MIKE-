@@ -24,8 +24,8 @@ def listen():
             print("Escuchando...")
             pc = listener.listen(source)
             rec = listener.recognize_google(pc, language='es-ES')
-            rec = rec.lower(0)            #if name in rec:
-                #rec = rec.replace(name, "")
+            rec = rec.lower(0)          
+               
 
     except:
         pass
@@ -33,15 +33,16 @@ def listen():
 
 
 
-# your credentials
-client_id = 'PONER ID DE SPOTIFY'        #https://developer.spotify.com/dashboard/login
-client_secret = 'PONER ID SECRETA DE SPOTIFY'
+
+client_id = 'poner id cliente' 
+client_secret = 'poner id client secret'
 flag = 0
 
-# artist and name of the song
+
 author = ''
 song = ''
-def escucharcnacion():
+
+def escucharcancion():
     global song
     talk("¿Qué canción quieres escuchar?")
     rec = listen()
@@ -57,12 +58,11 @@ def empezar():
     global song
 
     if len(author) > 0:
-        # authenticate
+
         sp = spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials(client_id, client_secret))
         result = sp.search(author)
 
         for i in range(0, len(result["tracks"]["items"])):
-            # songs by artist
             name_song = result["tracks"]["items"][i]["name"].upper()
 
             if song in name_song:
@@ -70,21 +70,18 @@ def empezar():
                 web.open(result["tracks"]["items"][i]["uri"])
                 sleep(5)
                 pyautogui.press("enter")
-    
+                break
+                         
             
-                
-            
-    # if song by artist not found
     if flag == 0:
         song = song.replace(" ", "%20")
         web.open(f'spotify:search:{song}')
         sleep(5)
-        for i in range(28):                #saltos para llegar a la canción
+        for i in range(28):                
             pyautogui.press("tab")
+        pyautogui.press("enter")
+        
+      
+     
 
-        for i in range(2):
-            pyautogui.press("enter")
-            sleep(600)
-            
-
-escucharcnacion()
+escucharcancion()
