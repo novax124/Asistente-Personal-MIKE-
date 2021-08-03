@@ -12,6 +12,10 @@ request_body = {
     "summary" : "Calendario Nuevo"
 }
 
+"""    CREAR CALENDARIOS    """
 response = service.calendars().insert(body = request_body).execute()
 print(response)
 
+"""   ELIMINAR CALENDARIOS  """
+
+#service.calendars().delete(calendarId = "id_calendario").execute()
