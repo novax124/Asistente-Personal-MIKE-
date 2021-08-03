@@ -12,16 +12,6 @@ request_body = {
     "summary" : "San Francisco Events"
 }
 
-"""
-To create a calendar
-"""
-
 response = service.calendars().insert(body = request_body).execute()
 print(response)
 
-"""
-To delete a calendar
-"""
-#service.calendars().delete(calendarId= 'id del calendar' ).execute()
-
-#'id': 'id del calendar'
