@@ -18,7 +18,7 @@ SCOPES = ["https://www.googleapis.com/auth/calendar"]
 
 service = Create_Service(CLIENT_SECRET_FILE, API_NAME, API_VERSION, SCOPES)
 
-calendar_id_chicago = 'c_c6pdkmik4p1ff1qj1l86uc7j68@group.calendar.google.com'
+calendari = 'id_calendario'
 
 #-------------------------------------------
 
@@ -208,11 +208,23 @@ def horass():
 def minutos():
     global minutos1
     rec = listen()
-    if "" in rec:                     
-        minutos1 = int(rec)
-        print("¿Cuando acaba?")
-        talk("¿Cuando acaba?")
-    alcabo()
+    if "" in rec:
+        for i in dias:  
+            if rec in i:
+                minutos1 = dias[i]
+                print(minutos1)                          
+                print("¿Cuándo acaba?")
+                talk("¿Cuándo acaba?")
+                alcabo()          
+                break
+                
+        if rec not in i:
+            minutos1 = int(rec)
+            print("¿Cuándo acaba?")
+            talk("¿Cuándo acaba?")
+            print(minutos1)
+            alcabo()
+
 
 def alcabo():
     global anio1
@@ -333,7 +345,7 @@ def calendario():
     supportsAttachments = True
 
     response = service.events().insert(
-        calendarId = calendar_id_chicago,
+        calendarId = calendari,
         maxAttendees=maxAttendees,
         sendNotifications= sendNotification,
         sendUpdates = sendUpdate,
