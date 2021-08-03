@@ -9,9 +9,9 @@ SCOPES = ["https://www.googleapis.com/auth/calendar"]
 service = Create_Service(CLIENT_SECRET_FILE, API_NAME, API_VERSION, SCOPES)
 
 request_body = {
-    "summary" : "Calendari Nou"
+    "summary" : "Calendario Nuevo"
 }
 
-resposta = service.calendars().insert(body = request_body).execute()
-print(resposta)
+response = service.calendars().insert(body = request_body).execute()
+print(response)
 
