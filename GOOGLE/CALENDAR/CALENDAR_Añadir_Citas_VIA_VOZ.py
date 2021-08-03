@@ -294,12 +294,6 @@ def calendario():
     global minutos2
     global mensajito
     global titul
-    colors = service.colors().get().execute()
-    #pprint(colors)
-
-    recurrence = [    #cambiar datos
-        "RRULE:FREQ=WEEKLY;COUNT=5;BYDAY=TU,FR" 
-    ]
 
     hour_adjustment = -2
     event_request_body = {
@@ -315,22 +309,18 @@ def calendario():
         "description": mensajito,
         "colorId": 5,
         "status": "confirmed",
-        "transparency": "opaque",
         "visibility": "private",
-        "location": "Chicago, IL",
+        "location": "lacalitat",
         "attachments": [
             {
                 "fileUrl": "https://drive.google.com/file/d/1GnmQHK6EgcEwHHoOyFREGcgBrstYs_9J/view",
-                "title": "Invitation Letter Template in Word Doc"
+                "title": "títol de l'arxiu"
             }
         ],
         "attendees": [
             {
-                "displayName": "JJ",
-                "comment": "I enjoy coding",
-                "email": "dpue303@ibellvitge.net",
-                "optional": False,
-                "organizer": True,
+                "comment": "comentari",
+                "email": "correu electrònic",
                 "responseStatus": "accepted"
             }
     
