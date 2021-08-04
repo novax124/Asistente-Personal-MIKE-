@@ -2,5 +2,4 @@ from googletrans import Translator
 
 translator = Translator()
 
-print(translator.translate("M'agraden els llibres", dest = "de" ))
-
+print(translator.translate("Me gustan los libros", dest = "de" ))
