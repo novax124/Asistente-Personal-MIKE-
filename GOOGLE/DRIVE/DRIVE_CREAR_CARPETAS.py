@@ -13,7 +13,7 @@ for carpeta in carpetas:
     file_metadata = {
         "name" : carpeta,
         "mimeType" : "application/vnd.google-apps.folder"
-        #"parents" : []
+        
     }
 
     service.files().create(body=file_metadata).execute()
