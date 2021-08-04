@@ -10,16 +10,16 @@ data = res.json()
 
 
 temp = data["main"]["temp"]
-wind_speed = data["wind"]["speed"]
+vel_viento = data["wind"]["speed"]
 
-latitude = data["coord"]["lat"]
-longitude = data["coord"]["lon"]
+latitud = data["coord"]["lat"]
+longitud = data["coord"]["lon"]
 
-description = data["weather"][0]["description"]
+descripcion = data["weather"][0]["description"]
 
-print("Temprerature: ", temp)
-print("Wind Speed: {} m/s".format(wind_speed))
-print("Latitude: {}".format(latitude))
-print("Longitude: {}".format(longitude))
-print("Description: {}".format(description))
+print("Tempreratura: ", temp)
+print("Velocidad del viento: {} m/s".format(vel_viento))
+print("Latitud: {}".format(latitud))
+print("Longitud: {}".format(longitud))
+print("Descripción: {}".format(descripcion))
 
