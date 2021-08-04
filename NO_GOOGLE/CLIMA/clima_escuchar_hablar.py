@@ -22,9 +22,6 @@ def listen():
             pc = listener.listen(source)
             rec = listener.recognize_google(pc, language='es-ES')
             rec = rec.lower(0)
-            #if name in rec:
-                #rec = rec.replace(name, "")
-
     except:
         pass
     return rec
@@ -40,7 +37,7 @@ def corre():
         rec = listen()
         if "" in rec:
             city = rec
-            url = "http://api.openweathermap.org/data/2.5/weather?q={}&appid=----url-----".format(city) #.format importante
+            url = "http://api.openweathermap.org/data/2.5/weather?q={}&appid=----url-----".format(city) 
             
             
             res = requests.get(url)
@@ -49,17 +46,17 @@ def corre():
 
 
             temp = data["main"]["temp"]
-            wind_speed = data["wind"]["speed"]
+            vel_viento = data["wind"]["speed"]
 
-            latitude = data["coord"]["lat"]
-            longitude = data["coord"]["lon"]
+            latitud = data["coord"]["lat"]
+            longitud = data["coord"]["lon"]
 
-            description = data["weather"][0]["description"]
+            descripcion = data["weather"][0]["description"]
 
-            print("Temprerature: ", temp)                 #mismo problema que el de calendar / no puedo pasar de numeros a letras
-            print("Wind Speed: {} m/s".format(wind_speed))
-            print("Latitude: {}".format(latitude))
-            print("Longitude: {}".format(longitude))
-            print("Description: {}".format(description))
+            print("Temprerature: ", temp)              
+            print("Wind Speed: {} m/s".format(vel_viento))
+            print("Latitude: {}".format(latitud))
+            print("Longitude: {}".format(longitud))
+            print("Description: {}".format(descripcion))
 
 corre()
