@@ -1,4 +1,4 @@
-# shows artist info for a URN or URL
+
 
 from spotipy.oauth2 import SpotifyClientCredentials
 import spotipy
@@ -12,14 +12,14 @@ from time import sleep
 flag = 0
 client_id = "poner id cliente"
 client_secret = "poner id cliente secret"
-author = '' 
+autor = '' 
 song = "In Too Deep".upper()
 
 
-if len(author) > 0:
+if len(autor) > 0:
 
     sp = spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials(client_id, client_secret))
-    result = sp.search(author)
+    result = sp.search(autor)
 
     for i in range(0, len(result["tracks"]["items"])):
         name_song = result["tracks"]["items"][i]["name"].upper()
@@ -36,3 +36,4 @@ if flag == 0:
     for i in range(28):
         pyautogui.press("tab")  
     pyautogui.press("enter")
+
