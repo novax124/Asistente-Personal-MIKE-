@@ -1,7 +1,7 @@
 import speech_recognition as sr
 import pyttsx3, pywhatkit
 import requests
-from pprint import pprint
+
 
 listener = sr.Recognizer()
 engine = pyttsx3.init()
@@ -22,6 +22,9 @@ def listen():
             pc = listener.listen(source)
             rec = listener.recognize_google(pc, language='es-ES')
             rec = rec.lower(0)
+            #if name in rec:
+                #rec = rec.replace(name, "")
+
     except:
         pass
     return rec
@@ -30,14 +33,12 @@ def listen():
 
 
 
-def corre():
-    rec = listen()
-    if "tiempo" in rec:
+def run_mike():
         talk("¿En qué ciudad quieres saber el clima?")
         rec = listen()
         if "" in rec:
             city = rec
-            url = "http://api.openweathermap.org/data/2.5/weather?q={}&appid=----url-----".format(city) 
+            url = "http://api.openweathermap.org/data/2.5/weather?q={}&appid=   URL OBTENIDA   &units=metric".format(city) #.format importante
             
             
             res = requests.get(url)
@@ -46,17 +47,17 @@ def corre():
 
 
             temp = data["main"]["temp"]
-            vel_viento = data["wind"]["speed"]
+            wind_speed = data["wind"]["speed"]
 
-            latitud = data["coord"]["lat"]
-            longitud = data["coord"]["lon"]
+            latitude = data["coord"]["lat"]
+            longitude = data["coord"]["lon"]
 
-            descripcion = data["weather"][0]["description"]
+            description = data["weather"][0]["description"]
 
-            print("Temprerature: ", temp)              
-            print("Wind Speed: {} m/s".format(vel_viento))
-            print("Latitude: {}".format(latitud))
-            print("Longitude: {}".format(longitud))
-            print("Description: {}".format(descripcion))
+            talk("La temperatura es: " + str(float(temp)))               
+            talk("La velocidad del viento es:" + str(wind_speed))
+            talk("La latitud es: " + str(latitude))
+            talk("La longitud es: " + str(longitude))
+            talk(description)
 
-corre()
+run_mike()
