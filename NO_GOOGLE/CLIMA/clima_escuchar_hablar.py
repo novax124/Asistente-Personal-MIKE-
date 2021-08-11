@@ -38,7 +38,7 @@ def run_mike():
         rec = listen()
         if "" in rec:
             city = rec
-            url = "http://api.openweathermap.org/data/2.5/weather?q={}&appid=   URL OBTENIDA   &units=metric".format(city) #.format importante
+            url = "http://api.openweathermap.org/data/2.5/weather?q={}&appid=   CLAVE OBTENIDA   &units=metric".format(city) #.format importante
             
             
             res = requests.get(url)
