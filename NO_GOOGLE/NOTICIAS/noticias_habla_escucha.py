@@ -39,7 +39,7 @@ def listen():
 
 
 
-my_api_key = "LLAVE"
+my_api_key = "CLAVE"   #clave que te encontrarás en la api de "News API" --> https://newsapi.org
 newsapi = NewsApiClient(api_key=my_api_key)
 
 def run_mike():
