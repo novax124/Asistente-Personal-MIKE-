@@ -142,15 +142,15 @@ def ponertodo():
         "location": "Chicago, IL",
         "attachments": [
             {
-                "fileUrl": "https://drive.google.com/file/d/1GnmQHK6EgcEwHHoOyFREGcgBrstYs_9J/view",
-                "title": "Invitation Letter Template in Word Doc"
+                "fileUrl": "url archivo",
+                "title": "título archivo"
             }
         ],
         "attendees": [
             {
-                "displayName": "JJ",
-                "comment": "I enjoy coding",
-                "email": "dpue303@ibellvitge.net",
+                "displayName": "nombre",
+                "comment": "comentario",
+                "email": "correo electrónico",
                 "optional": False,
                 "organizer": True,
                 "responseStatus": "accepted"
