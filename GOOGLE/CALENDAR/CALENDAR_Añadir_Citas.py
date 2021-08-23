@@ -28,7 +28,7 @@ events = {
         "dateTime": convert_to_RFC_datetime(2021,5,21,14 + hora , 45 ),
         "timeZone": "zona horaria"
     },
-    "summary": "títol de l'event",
+    "summary": "título del evento",
     "description": "descripció del event",
     "colorId": 5,
     "status": "confirmed",
@@ -36,14 +36,14 @@ events = {
     "location": "localitat",
     "attachments": [
         {
-            "fileUrl": "url de document de drive",
-            "title": "títol del document de drive"
+            "fileUrl": "url de documento de drive",
+            "title": "título del documento de drive"
         }
     ],
     "attendees": [
         {
-            "comment": "comentari",
-            "email": "correu electrònic",
+            "comment": "comentario",
+            "email": "correu electrónico",
             "responseStatus": "accepted"
         }
     
