@@ -76,16 +76,16 @@ def poner():
         "RRULE:FREQ=MONTHLY;COUNT=2" 
     ]
 
-    hour_adjustment = -8
+    hour_adjustment = -2
     event_request_body = {
         'start': {
             
             "dateTime": convert_to_RFC_datetime(int(poneranio), int(ponermes), int(ponerdia), int(ponerhora) + hour_adjustment , int(ponerminutos)),    #importante
-            "timeZone": "Asia/Taipei"
+            "timeZone": "Europe/Zurich"
         },
         "end": {
             "dateTime": convert_to_RFC_datetime(int(poneranio2), int(ponermes2), int(ponerdia2), int(ponerhora2) + hour_adjustment , int(ponerminutos2)),         #importante
-            "timeZone": "Asia/Taipei"
+            "timeZone": "Europe/Zurich"
         },
         "summary": ponertitulo,                                                           #importante
         "description": ponermensaje,                                      #importante
@@ -96,15 +96,15 @@ def poner():
         "location": "Chicago, IL",
         "attachments": [
             {
-                "fileUrl": "https://drive.google.com/file/d/1GnmQHK6EgcEwHHoOyFREGcgBrstYs_9J/view",
-                "title": "Invitation Letter Template in Word Doc"
+                "fileUrl": "url documento drive",
+                "title": "título documento"
             }
         ],
         "attendees": [
             {
                 "displayName": "JJ",
                 "comment": "I enjoy coding",
-                "email": "dpue303@ibellvitge.net",
+                "email": "correo electrónico",
                 "optional": False,
                 "organizer": True,
                 "responseStatus": "accepted"
