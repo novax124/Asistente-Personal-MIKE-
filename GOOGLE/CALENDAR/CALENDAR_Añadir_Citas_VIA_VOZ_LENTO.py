@@ -325,14 +325,14 @@ def calendario():
         "location": "lacalitat",
         "attachments": [
             {
-                "fileUrl": "https://drive.google.com/file/d/1GnmQHK6EgcEwHHoOyFREGcgBrstYs_9J/view",
-                "title": "títol de l'arxiu"
+                "fileUrl": "url arxivo",
+                "title": "título arxivo"
             }
         ],
         "attendees": [
             {
-                "comment": "comentari",
-                "email": "correu electrònic",
+                "comment": "comentario",
+                "email": "correo electrónico",
                 "responseStatus": "accepted"
             }
     
