@@ -66,29 +66,20 @@ def accion():
 
 
 def poner():
-    colors = service.colors().get().execute()
-#pprint(colors)
-    
-    
 
-
-    recurrence = [    #cambiar datos
-        "RRULE:FREQ=MONTHLY;COUNT=2" 
-    ]
-
-    hour_adjustment = -2
-    event_request_body = {
+    hora = -2
+    events = {
         'start': {
             
-            "dateTime": convert_to_RFC_datetime(int(poneranio), int(ponermes), int(ponerdia), int(ponerhora) + hour_adjustment , int(ponerminutos)),    #importante
+            "dateTime": convert_to_RFC_datetime(int(poneranio), int(ponermes), int(ponerdia), int(ponerhora) + hora , int(ponerminutos)),    #importante
             "timeZone": "Europe/Zurich"
         },
         "end": {
-            "dateTime": convert_to_RFC_datetime(int(poneranio2), int(ponermes2), int(ponerdia2), int(ponerhora2) + hour_adjustment , int(ponerminutos2)),         #importante
+            "dateTime": convert_to_RFC_datetime(int(poneranio2), int(ponermes2), int(ponerdia2), int(ponerhora2) + hora , int(ponerminutos2)),         #importante
             "timeZone": "Europe/Zurich"
         },
-        "summary": ponertitulo,                                                           #importante
-        "description": ponermensaje,                                      #importante
+        "summary": ponertitulo,                                                       
+        "description": ponermensaje,                                    
         "colorId": 5,
         "status": "confirmed",
         "transparency": "opaque",
@@ -96,22 +87,19 @@ def poner():
         "location": "Chicago, IL",
         "attachments": [
             {
-                "fileUrl": "url documento drive",
-                "title": "título documento"
+                "fileUrl": "url document drive",
+                "title": "títol document"
             }
         ],
         "attendees": [
             {
-                "displayName": "JJ",
-                "comment": "I enjoy coding",
-                "email": "correo electrónico",
-                "optional": False,
-                "organizer": True,
+                "comment": "comentari",
+                "email": "correu electrònic",
                 "responseStatus": "accepted"
             }
     
         ],
-        "recurrence": recurrence  #datos nuevos
+
 
     }
 
@@ -126,7 +114,7 @@ def poner():
         sendNotifications= sendNotification,
         sendUpdates = sendUpdate,
         supportsAttachments=supportsAttachments,
-        body=event_request_body
+        body= events
 
     ).execute()
 
@@ -140,29 +128,29 @@ def poner():
 calendariofake = Label(miframe, text = "CALENFAKE", fg = "yellow", font = ("Comic Sans MS", 40))
 calendariofake.place(x = 150, y = 10)
 
-empieza = Label(miframe, text = "Empieza:")       #.grid(row = 1, column = 0, pady = 10, padx = 10)
+empieza = Label(miframe, text = "Empieza:")      
 empieza.place(x = 20, y = 110)
-anio = Label(miframe, text = "Año:" )             #.grid(row = 1, column = 1, pady= 10)
+anio = Label(miframe, text = "Año:" )           
 anio.place(x = 100, y = 110)
-mes = Label(miframe, text= "Mes:")                #.grid(row = 1, column = 2, padx = 10)
+mes = Label(miframe, text= "Mes:")              
 mes.place(x = 200, y = 110)
-dia = Label(miframe, text= "Dia:")                #.grid(row = 1, column= 3, padx = 10)
+dia = Label(miframe, text= "Dia:")              
 dia.place(x = 300, y = 110)
-hora = Label(miframe, text= "Hora:")              #.grid(row = 1, column = 4, pady = 10)
+hora = Label(miframe, text= "Hora:")           
 hora.place(x = 400, y = 110)
 minutos = Label(miframe, text= "Minutos:")  
 minutos.place(x = 500, y = 110)
 
 
-acaba = Label(miframe, text = "Acaba:")      #.grid(row = 2, column = 0, pady = 10, padx = 10)
+acaba = Label(miframe, text = "Acaba:")      
 acaba.place(x = 20, y = 210)
-anio2 = Label(miframe, text = "Año:" )            #.grid(row = 2, column = 1, pady= 10)
+anio2 = Label(miframe, text = "Año:" )            
 anio2.place(x = 100, y = 210)
-mes2 = Label(miframe, text= "Mes:")               #.grid(row = 2, column = 2, padx = 10)
+mes2 = Label(miframe, text= "Mes:")               
 mes2.place(x = 200, y = 210)
-dia2 = Label(miframe, text= "Dia:")               #.grid(row = 2, column= 3, padx = 10)
+dia2 = Label(miframe, text= "Dia:")               
 dia2.place(x = 300, y = 210)
-hora2 = Label(miframe, text= "Hora:")             #.grid(row = 2, column = 4, pady = 10)
+hora2 = Label(miframe, text= "Hora:")            
 hora2.place(x = 400, y = 210)
 minutos2 = Label(miframe, text= "Minutos:") 
 minutos2.place(x = 500, y = 210)
