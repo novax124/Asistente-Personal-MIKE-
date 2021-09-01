@@ -201,7 +201,7 @@ titulou = StringVar()
 titulito = Entry(miframe, textvariable= titulou)
 titulito.place(x =100, y =310, width = 250 )
 
-mensajito = Text(miframe, width = 30, height = 10)    # no se si está bien  
+mensajito = Text(miframe, width = 30, height = 10)     
 mensajito.place(x = 100, y = 410)
 
 scrollVert = Scrollbar(miframe, command= mensajito.yview) 
@@ -209,8 +209,6 @@ scrollVert.place(x=400, y = 455 )
 
 mensajito.config(yscrollcommand= scrollVert.set)
 
-#mensajito = Entry(miframe)
-#mensajito.place(x = 100, y = 410, width = 250)
 
 #------botón enviar-----------------------------------------------
 
