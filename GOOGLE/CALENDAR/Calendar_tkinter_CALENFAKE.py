@@ -10,7 +10,7 @@ SCOPES = ["https://www.googleapis.com/auth/calendar"]
 
 service = Create_Service(CLIENT_SECRET_FILE, API_NAME, API_VERSION, SCOPES)
 
-calendar_id_chicago = 'calendar ID'
+calendarious = 'calendar ID'
 
 root = Tk()
 miframe = Frame(root, width= 650, height= 650)
@@ -109,7 +109,7 @@ def poner():
     supportsAttachments = True
 
     response = service.events().insert(
-        calendarId = calendar_id_chicago,
+        calendarId = calendarious,
         maxAttendees=maxAttendees,
         sendNotifications= sendNotification,
         sendUpdates = sendUpdate,
