@@ -33,7 +33,7 @@ def listen():
     return rec
 
 
-def minutos():
+def minutos():  #importar esta función para la interfaz gráfica
         talk("¿Minutos?")
         minutos = listen()
         for i in tiempo2:
