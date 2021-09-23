@@ -19,24 +19,24 @@ def botones(rec):  #esta función se encarga de importar las funciones de cada p
 #from "programa" import "función"  <-- la función que se importará es aquella que hace la acción importante del programa.
 #después, ejecutamos la función que se ha importado.
 
-            #calendar código---------------------------------
+            #código calendar
 
                 if rec == 2:                        
                     
                     from calendario import run_mike
                     run_mike()
 
-            #gmail código---------------------
+            #código gmail
 
                 if rec == 1:
-                    from MIKEELGRANDEGMAIL import run_mike2
+                    from gmail import run_mike2
                     run_mike2()
 
 
             #código wikipedia
 
                 if rec == 14:
-                    from wikislamejor import escuchar
+                    from wikipedia import escuchar
                     escuchar()
 
 
@@ -50,33 +50,33 @@ def botones(rec):  #esta función se encarga de importar las funciones de cada p
             #código amazon 
              
                 if rec == 13:                         
-                    from pruebascarritoamazonVOZ import run_mike4
+                    from amazon import run_mike4
                     run_mike4()
 
 
             #código spotify
                 if rec == 4:
-                    from SPOTIVOZ import escucharcancion
+                    from spotify import escucharcancion
                     escucharcancion()
 
 
             #código bloc de notas
 
                 if rec == 19:
-                    from archivo1 import runn
+                    from blocdenotas import runn
                     runn()
             
-            #código CLIMAVOZ
+            #código clima
 
                 if rec == 5:
-                    from CLIMAVOZ import run_mike6
+                    from clima import run_mike6
                     run_mike6()
 
 
-            #código TRADUCTOR
+            #código traductor
 
                 if rec == 3:
-                    from TRADUCTORVOZ import empezar
+                    from traductor import empezar
                     empezar()
 
 
@@ -89,37 +89,36 @@ def botones(rec):  #esta función se encarga de importar las funciones de cada p
             #código noticias
 
                 if rec == 12:
-                    from leer_noticias_API_Buena2222 import run_mike7
+                    from noticias import run_mike7
                     run_mike7()
                 
-            #calculadora
+            #códgio calculadora
 
                 if rec == 9:
                     from calculadora import run_mike8
                     run_mike8()
 
-            #grabadora
+            #códgio grabadora
 
                 if rec == 15:
-                    from grabadoravoz import run_mike9
+                    from grabadora import run_mike9
                     run_mike9()
                     
-            #crono / cuenta atrás / alarma
+            #códgio (crono / cuenta atrás / alarma)
 
                 if rec == 8:
-                    from crono import run_mike10
+                    from reloj import run_mike10
                     run_mike10()
 
                 
-
-            #buscador
+            #códgio buscador
 
                 if rec == 6:
-                    from buscadoor import run_mike11
+                    from buscador import run_mike11
                     run_mike11()
 
             
-            #conversación
+            #códgio conversación
 
                 if rec == 16:
                     from conversacion import run_mike12
