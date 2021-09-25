@@ -77,8 +77,8 @@ def mensajee():
         print(rec)
         print(mensajito)
         mensajito = rec
-        print("¿Seguro que quieres enviar este mensaje a David?")
-        talk("¿Seguro que quieres enviar este mensaje a David?")
+        print("¿Seguro que quieres enviar este mensaje?")
+        talk("¿Seguro que quieres enviar este mensaje?")
         print(rec)
         print(mensajito)
         seguroo()
