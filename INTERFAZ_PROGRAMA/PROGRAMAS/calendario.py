@@ -18,7 +18,7 @@ SCOPES = ["https://www.googleapis.com/auth/calendar"]
 
 service = Create_Service(CLIENT_SECRET_FILE, API_NAME, API_VERSION, SCOPES)
 
-calendario_id = 'c_diiv2vljporasfr88fmus4c54o@group.calendar.google.com'
+calendario_id = ' PONER ID DEL CALENDARIO'
 
 #-------------------------------------------
 
