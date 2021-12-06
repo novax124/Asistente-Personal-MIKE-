@@ -29,7 +29,7 @@ def listen():
         with sr.Microphone() as source:
             print("Escuchando...")
             pc = listener.listen(source)
-            rec = listener.recognize_google(pc, language='ca-CA')
+            rec = listener.recognize_google(pc, language='es-ES')
             rec = rec.lower(0)
 
 
